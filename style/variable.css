@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #191d2b;
+    
+    --color-black: #000000;
+
+    --secondary-color: #0c0c6e;
+
+    --color-white: #fff;
+
+    --color-yellow: #daa520;
+
+    --text-color-1:#a52a2a;
+
+    --text-color-2:#e21515;
+
+    --color-yellow-1: #c99922;
+
+    --box-shadow-01: 0 0 5px #0e0d0d, 0 0 5px 0 #0e0d0d;
+
+    --color-grey-1: #363535;
+
+    --color-grey-2: #575555;
+
+    --color-grey-3: #8a8888;
+
+    --color-grey-4: #b1aeae;
+
+    --color-grey-5: #dfdfdf;
+
+--linear-bg: linear-gradient(to top, rgba(248, 166, 58, 0.541) 30%, rgba(248, 171, 70, 0.911) 70%);
+
+--linear-bg-01: linear-gradient(to top, rgb(248, 166, 58) 30%, rgba(248, 171, 70, 0.911) 70%);
+
+--linear-bg-02: linear-gradient(to top, rgba(248, 171, 70, 0.911),rgba(248, 171, 70, 0.911));
+    --transparent: rgba(0, 0, 0, 0);
+
+    --transform: translateY(0) scale(1);
+
+    --transition: all .5s ease-in-out;
+
+    --border-radius: 10px;
+
+    --border-radius-01: 5px;
+
+    --border-radius-02: 20px;
+
+    --success:rgb(4, 139, 4);
+
+    --success-bg:rgb(185, 230, 185);
+
+    --green-border:rgb(76, 245, 76);
+
+    --fail:rgb(235, 10, 10);
+
+    --font-W:600;
+
+    --red-border:red;
+
+    --fail-bg:rgba(241, 71, 71, 0.247);
+
+    --box-shadow-1: 0 3px 15px #b1aeae;
+
+    --box-shadow-2: 2px 5px 5px #363535;
+
+    --box-shadow-3: 0 1px 5px #a52a2a;
+}
