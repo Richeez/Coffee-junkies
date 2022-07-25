@@ -1,17 +1,17 @@
-class Login {
+class SignUp {
     constructor(form, fields) {
         this.form = form;
 
         this.fields = fields;
 
-        this.validateOnSubmit();
+        this.validateOnSubmitForSignUp();
 
-        this.switchState()
+        this.switchStateForSignUp()
     }
 
     
 
-    validateOnSubmit() {
+    validateOnSubmitForSignUp() {
           
         let track = this;
         this.form.addEventListener('submit', (e) => {
@@ -24,7 +24,7 @@ class Login {
                 console.log('as PESibling',field.nextElementSibling);
                 console.log('as input value', input.value);
                 
-                track.switchState(input)
+                track.switchStateForSignUp(input)
                     
                 
                 if (track.validateFields(input) === false) {
@@ -111,23 +111,18 @@ class Login {
     }
 
     
-    switchState() {
+    switchStateForSignUp() {
         
         // let password02 = document.querySelector('#confirm-password');
 
         let togglePassword01 = document.querySelector('#toggle-password01');
 
-        let togglePassword02 = document.querySelector('#toggle-password02');
-
-        let togglePassword03 = document.querySelector('#toggle-password03');
-
-        let togglePassword04 = document.querySelector('#toggle-password04');
-        
+        let togglePassword02 = document.querySelector('#toggle-password02');        
         let track = this
-        console.log('as tracker',track);
+        // console.log('as tracker',track);
         
         track.fields.forEach((field) => { 
-            let password01 = document.querySelector('#password');
+            let password = document.querySelector('#password');
 
             const input = document.querySelector(`#${field}`);
             
@@ -135,8 +130,8 @@ class Login {
             togglePassword01.addEventListener('click', function(){ 
                     //todo___toggle attribute type
 console.log('are you working');
-                let type = password01.getAttribute('type') === 'password' ? 'text' : 'password';
-                password01.setAttribute('type', type)
+                let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type)
 
                 //todo___toggle icon
 
@@ -146,13 +141,13 @@ console.log('are you working');
             
             
             togglePassword02.addEventListener('click', function () { 
-                        let password02 = document.querySelector('#confirm-password');
+                        let confirmPassword = document.querySelector('#confirm-password');
             // let password02 = document.querySelector('#confirm-password');
     
                     //todo___toggle attribute type
     console.log('this is working');
-                let type02 = password02.getAttribute('type') === 'password' ? 'text' : 'password';
-                password02.setAttribute('type', type02)
+                let type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+                confirmPassword.setAttribute('type', type)
     
                 //todo___toggle icon
     
@@ -160,36 +155,7 @@ console.log('are you working');
                 this.classList.toggle('fa-eye-slash')
             });
             
-            togglePassword03.addEventListener('click', function () { 
-                        let password03 = document.querySelector('#password');
-    
-                    //todo___toggle attribute type
-    console.log('as pass 3');
-                let type03 = password03.getAttribute('type') === 'password' ? 'text' : 'password';
-                password03.setAttribute('type', type03)
-    
-                //todo___toggle icon
-    
-    
-                this.classList.toggle('fa-eye-slash')
-            });
-            
-            togglePassword04.addEventListener('click', function () { 
-                        let password04 = document.querySelector('#password');
-            // let password02 = document.querySelector('#confirm-password');
-    
-                    //todo___toggle attribute type
-    console.log('as pass 4');
-                let type02 = password04.getAttribute('type') === 'password' ? 'text' : 'password';
-                password04.setAttribute('type', type02)
-    
-                //todo___toggle icon
-    
-    
-                this.classList.toggle('fa-eye-slash')
-            });
-            
-        });
+                   });
 
  }
 
@@ -208,42 +174,8 @@ if (form) {
         // console.log(field);
     });
 
-    const validator = new Login(form, fields);
+    const validator = new SignUp(form, fields);
     
 }
 
-// let classSwitcher = document.querySelectorAll('.reveal');
-
-// function switchState() {
-
-//     for (let i = 0; i < classSwitcher01.length; i++) {
-//         classSwitcher01[i].addEventListener('click', function (e) {
-        
-//             let currentBtn = document.querySelectorAll('.opacity');
-//             currentBtn[0].className = currentBtn[0].className.replace('opacity', '');
-//             this.className += ' opacity'
-
-//             const look = document.querySelectorAll('#password')
-//             console.log('as password', look);
-                   
-            
-            
-            
-//         });
-        
-//     }
-      
-//        for (let i = 0; i < classSwitcher02.length; i++) {
-//              classSwitcher02[i].addEventListener('click', function () {
-                  
-//                   let currentBtn = document.querySelectorAll('.change');
-//                  currentBtn[0].className = currentBtn[0].className.replace('change', '');
-
-//                    this.className += ' change'
-//              });
-        
-//        }
-// }
-
-// switchState()
 
