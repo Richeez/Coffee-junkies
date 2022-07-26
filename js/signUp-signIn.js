@@ -212,38 +212,3 @@ if (form) {
     
 }
 
-// let classSwitcher = document.querySelectorAll('.reveal');
-
-// function switchState() {
-
-//     for (let i = 0; i < classSwitcher01.length; i++) {
-//         classSwitcher01[i].addEventListener('click', function (e) {
-        
-//             let currentBtn = document.querySelectorAll('.opacity');
-//             currentBtn[0].className = currentBtn[0].className.replace('opacity', '');
-//             this.className += ' opacity'
-
-//             const look = document.querySelectorAll('#password')
-//             console.log('as password', look);
-                   
-            
-            
-            
-//         });
-        
-//     }
-      
-//        for (let i = 0; i < classSwitcher02.length; i++) {
-//              classSwitcher02[i].addEventListener('click', function () {
-                  
-//                   let currentBtn = document.querySelectorAll('.change');
-//                  currentBtn[0].className = currentBtn[0].className.replace('change', '');
-
-//                    this.className += ' change'
-//              });
-        
-//        }
-// }
-
-// switchState()
-
