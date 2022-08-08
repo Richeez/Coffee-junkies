@@ -119,7 +119,7 @@ class SignIn {
 
         
         let track = this
-        console.log('as tracker',track);
+        // console.log('as tracker',track);
         
         track.fields.forEach((field) => { 
     
@@ -160,7 +160,7 @@ if (form01) {
     const fields = ['email02', 'password02'];
 
     fields.forEach(field => { 
-        console.log(field);
+        // console.log(field);
     });
 
     const validator = new SignIn(form01, fields);

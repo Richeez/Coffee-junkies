@@ -21,10 +21,10 @@ class SignUp {
             track.fields.forEach((field) => {
                 
                 const input = document.querySelector(`#${field}`);
-                console.log('as PESibling',field.nextElementSibling);
+                console.log('as PESibling',input);
                 console.log('as input value', input.value);
                 
-                track.switchStateForSignUp(input)
+                // track.switchStateForSignUp(input)
                     
                 
                 if (track.validateFields(input) === false) {
@@ -35,8 +35,8 @@ class SignUp {
             });
 
             if (error === 0) {
-                this.form.submit();
-            
+                // this.form.submit();
+            console.log('success');
             }
 
 
@@ -50,34 +50,58 @@ class SignUp {
         
     // }
     validateFields(field) {
+
+       const pass01 = document.querySelector('.password')
+
+      const  pass02 = document.querySelector('.confirm-password')
+       
         if (field.value.trim() === '') {
         
             this.setStatus(field, `${field.nextElementSibling.innerText}Field can not be blank`, 'error');
-            return false;
+            // return false;
         } else {
 
 
              if (field.type === 'password') {
-         
+                
+
+                    
+
                 if (field.value.length < 8) {
                     console.log('am working');
                     this.setStatus(field, `${field.nextElementSibling.innerText}Must be at least 8 characters`, 'error');
-                    return false;
+                    // return false;
+
+                    
                 } else {
                     this.setStatus(field, null, 'successful');
-                    return true;
+                    // return true;
                 }
+
+                if (pass01.value !== pass02.value) {
+                 
+                    this.setStatus(field, `${field.nextElementSibling.innerText}Passwords do not match`, 'error');
+                    // return false;
+
+             } else {
+                this.setStatus(field, null, 'successful');
+
+                    
+                 }
+                
                 
             } else {
                 this.setStatus(field, null, 'successful');
-                return true;
+                // return true;
             }
+
+            
         
         }
     
     }
     
-    setStatus(field, message, status ) {
+    setStatus(field, message, status) {
         const errorMessage = field.parentElement.querySelector('.action-message');
         let timeOut = 5000;
         
@@ -124,7 +148,6 @@ class SignUp {
         track.fields.forEach((field) => { 
             let password = document.querySelector('#password');
 
-            const input = document.querySelector(`#${field}`);
             
             
             togglePassword01.addEventListener('click', function(){ 
@@ -164,6 +187,7 @@ console.log('are you working');
     
     
 }
+
 
 const form = document.querySelector('#form');
 
