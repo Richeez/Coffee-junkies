@@ -201,8 +201,3 @@ if (form) {
     const validator = new SignUp(form, fields);
     
 }
-
-<<<<<<< HEAD:js/signUp-signIn.js
-=======
-
->>>>>>> 5794938d25257b5f48a97134667e90a3ba712235:js/signUp.js
